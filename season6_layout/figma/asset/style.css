@@ -1,0 +1,242 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    border-bottom: 2px solid #f3f3f3;
+    background-color: #FFF;
+}
+body{
+    background-color: #fefefe;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-menu .logo{
+display: flex;
+align-items: center;
+}
+.nav-menu .logo img{
+    padding: 12px;
+}
+.nav-menu .nav ul{
+    display: flex;
+   
+    
+}
+.nav-menu .nav ul li{
+    padding: 44px 60px;
+    
+}
+.nav-menu .nav ul li a{
+    color: black;
+}
+.nav-menu .nav ul li a:hover{
+    color: #518581;
+    padding: 44px 0;
+    border-bottom: 3px solid #518581;
+    
+}
+.nav-menu .user{
+    display: flex;
+
+}
+.nav-menu .user div{
+    padding: 0 24px 0 0;
+}
+.user div i{
+    width: 30px;
+    height: 30px;
+}
+.title{
+    text-align: center;
+    margin-top: 100px;
+}
+.title h1{
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+.title p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 180%;
+    width: 600px;
+    margin-left: 478px;
+    margin-bottom: 46px;
+}
+.image{
+    background-image: url("../image/Rectangle\ 38.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    
+}
+.content-img{
+    margin: 153px 0;
+}
+.content-img button{
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: none;
+    background-color: #518581;
+    color: #FFF;
+    margin-bottom:15px ;
+}
+.content-img h1{
+    margin-bottom: 20px;
+    font-size: 44px;
+    font-weight: 700;
+    color: #FFF;
+}
+.content-img p{
+    font-size: 24px;
+    color: #FFF;
+    font-weight: 700;
+}
+.arrow{
+    display: flex; 
+   
+    padding: 230px 60px;
+    
+}
+.arrow p {
+    background-color: #414444;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+    color: #FFF;
+}
+.ellipse{
+    margin: 474px 104px;
+}
+.seach-filter{
+    display: flex;
+}
+.seach{
+    
+    margin: 54px 0 0 100px;
+    background-color: #FFF;
+    padding: 25px 26px;
+    height: 84px;
+    width: 1000px;
+}
+.seach input{
+    border: none;
+    font-size: 18px;
+    margin-left: 18px;
+    
+}
+.seach button{
+    padding: 15px 28px 16px;
+    background-color: #518581;
+    border: none;
+    margin-left: 570px;
+    color: #FFF;
+}
+
+.filter{
+    display: inline-block;
+    border: 1px solid black;
+    height: 84px;
+    padding: 25px 26px;
+    margin: 54px 100px 0 20px;
+}
+.total-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 100px;
+}
+.total-product .title-product{
+    display: flex;
+    align-items: center;
+}
+.total-product h1{
+    padding: 0 16px 0 0;
+    font-size: 44px;
+}
+.total-product h6{
+    font-size: 16px;
+}
+.total-product button{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 13px 20px;
+    border: none;
+    background-color: #FFF;
+
+}
+.total-product button img{
+    margin-right:10px ;
+}
+.products{
+    margin: 50px 100px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 40% 40% 40%;
+    gap: 30px;
+
+}
+.slider-button{
+    text-align: center;
+    margin-top: 280px;
+}
+.slider-button button{
+    height: 32px;
+    width: 32px;
+    border: none;
+    cursor: pointer;
+}
+.slider-button button:hover{
+    background-color:#518581 ;
+    transform: scale(1.5);
+}
+footer{
+    display: flex;
+justify-content: space-between;   
+align-items: flex-start;
+margin: 105px 100px; 
+border-top: 1px solid black;
+}
+.footer-logo{
+    margin:85px 0 ;
+}
+.footer-logo figcaption{
+    display: flex;
+    align-items: center;
+    margin: 0 0 30px;
+
+}
+.footer-logo img {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+}
+.footer-content{
+    display: flex;
+    margin: 20px;
+}
+.footer-content ul{
+    margin: 50px ;
+}
+.footer-content ul li{
+    padding: 20px;
+}
+.footer-content ul li:first-child{
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+@media (max-width:576px) {
+    main{
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function addNumbers(num1, num2) {
+        // Trả về tổng của 2 số
+        return num1 + num2;
+      }
+
+      // Nhập 2 số từ người dùng
+      const num1 = Number(prompt("Nhập số thứ nhất: "));
+      const num2 = Number(prompt("Nhập số thứ hai: "));
+
+      // Gọi hàm addNumbers()
+      const sum = addNumbers(num1, num2);
+
+      // Hiển thị kết quả
+      console.log("Tổng của 2 số là " + sum);
+      // bài 2
+      function calculateCircle(radius) {
+        // Tính diện tích
+        const area = Math.PI * radius * radius;
+
+        // Tính chu vi
+        const circumference = 2 * Math.PI * radius;
+
+        // Trả về diện tích và chu vi
+        return {
+          area: area,
+          circumference: circumference,
+        };
+      }
+      //bài 3
+      function isNumber(c) {
+        // Kiểm tra xem ký tự có nằm trong phạm vi từ 0 đến 9 hay không
+        return c >= "0" && c <= "9";
+      }
+
+      // Nhập ký tự từ người dùng
+      const c = prompt("Nhập ký tự: ");
+
+      // Gọi hàm isNumber()
+      const isNumber = isNumber(c);
+
+      // Hiển thị kết quả
+      if (isNumber) {
+        console.log(c + " là ký tự số.");
+      } else {
+        console.log(c + " không phải là ký tự số.");
+      }
+      // bài 4
+      function isPositiveInteger(number) {
+        // Nếu số là số âm hoặc bằng 0 thì không phải là nguyên dương
+        if (number < 1) {
+          return false;
+        }
+
+        // Nếu số là số nguyên thì là nguyên dương
+        else {
+          return true;
+        }
+      }
+
+      // Nhập số từ người dùng
+      const number = Number(prompt("Nhập số: "));
+
+      // Gọi hàm isPositiveInteger()
+      const isPositiveInteger = isPositiveInteger(number);
+
+      // Hiển thị kết quả
+      console.log(isPositiveInteger);
+      //bài 5
+      function swapNumbers(a, b) {
+        // Lưu trữ giá trị của a
+        const temp = a;
+
+        // Gán giá trị của b cho a
+        a = b;
+
+        // Gán giá trị của temp cho b
+        b = temp;
+
+        // Trả về 2 số nguyên đã được đổi chỗ
+        return [a, b];
+      }
+
+      // Nhập 2 số nguyên từ người dùng
+      const a = Number(prompt("Nhập số nguyên thứ nhất: "));
+      const b = Number(prompt("Nhập số nguyên thứ hai: "));
+
+      // Gọi hàm swapNumbers()
+      const [newA, newB] = swapNumbers(a, b);
+
+      // Hiển thị kết quả
+      console.log("Số nguyên thứ nhất sau khi đổi chỗ: " + newA);
+      console.log("Số nguyên thứ hai sau khi đổi chỗ: " + newB);
+    </script>
+  </body>
+</html>

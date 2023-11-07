@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#clock{
+    margin: 300px 300px;
+    border: 5px solid brown;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.mid{
+    background-color: brown;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 56%;
+    left: 26%;
+    
+}
+.second {
+    position: absolute;
+    top: 57%;
+    left: 26%;
+    right: 26%;
+    width: 2px;
+    height: 80px;
+    background-color: #333;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(0deg); /* Căn giữa và hướng xuất phát từ gốc kim phút */
+    animation: rotateMinute 1s  linear infinite; /* 1 vòng kim phút trong 1 phút */
+  }
+@keyframes rotateSecond{
+    
+        from {
+            transform: translate(-50%, -100%) rotate(0deg);
+          }
+          to {
+            transform: translate(-50%, -100%) rotate(360deg);
+          }
+        }
+@keyframes rotateMinute {
+    from {
+      transform: translate(-50%, -100%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -100%) rotate(360deg);
+    }
+  }
+@keyframes rotateHour {
+    from {
+      transform: translate(-50%, -100%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -100%) rotate(360deg);
+    }
+  }

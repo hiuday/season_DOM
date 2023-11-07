@@ -1,0 +1,166 @@
+/* header */
+.header{
+    background-image: url("https://indochina-ep.com/wp-content/uploads/2023/04/riccardo-annandale-7e2pe9wjL9M-unsplash-1-1-1-1536x984.png");
+background-position: center;
+background-size: cover;
+width: 100%;
+}
+body{
+    background-color: #FFFFFF;
+}
+
+/* .nav-header{
+    margin-left: 200px;
+
+} */
+.nav-logo{
+    display: inline-block;
+    margin-left: 200px;
+}
+.nav-logo img{
+width: 200px;
+height: 100px;
+}
+.nav-content{
+    display: inline-block;
+}
+.nav-content ul,li{
+    
+    transform: translateY(-30px);
+    display: inline-block;
+    color: #FAFBFC;
+    list-style: none;
+    margin-left: 30px;
+}
+.nav-content a{
+    font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+color: #FAFBFC;
+}
+
+.nav-content a:hover{
+    color: #1B8A4E;
+    transition: 0.8s;
+}
+.header-contact{
+    color: #FAFBFC;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 190px;
+    
+}
+.header-contact span{
+    margin: 7px 10px;
+}
+/* kết thúc phần liên lạc */
+.header-content{
+    margin: 100px 200px;
+}
+.header-content h1{
+    text-transform: uppercase;
+    color: #FAFBFC;
+    margin-bottom:10px ;
+}
+.header-content p{
+    color: #FAFBFC;
+    line-height: 40px;
+    width: 30%;
+}
+.header-content button{
+    text-transform: uppercase;
+    padding: 20px 30px;
+    background-color: #1B8A4E;
+    color: #FAFBFC;
+    
+    margin: 50px 0;
+}
+.header-content button:hover{
+   background-color: #191F37;
+   transition: 1s;
+ 
+ letter-spacing: 5px;
+}
+/* why us */
+.body-whyus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.body-whyus h1{
+    text-transform: capitalize;
+    color: #1B8A4E;
+    font-size: 34px;
+    font-weight: 800;
+}
+.body-flex-content{
+    margin-top: 50px;
+    margin-left: 200px;
+    padding-left: 100px;
+/* display: grid;
+grid-template-columns: 30% 30% 30%;
+
+justify-content: space-between;
+justify-items: center; */
+display: flex;
+width: 100%;
+justify-content: center;
+}
+.body-logo{
+    margin-right: 40px;
+    padding: 20px;
+    color: #1B8A4E;
+    border-radius: 50%;
+    border: 1px solid #1B8A4E;
+}
+.flex-content{
+    display: flex;
+    align-items: center;
+}
+.body-content{
+    display: block;
+    width: 50%;
+}
+.body-logo:hover{
+    transform: scale(2);
+    margin: 0 30px;
+    transition: 1s;
+}
+/* kết thúc why us */
+/* model */
+.model{
+    margin: 100px 30px;
+  text-align: center;
+}
+.model h1{
+    text-transform: capitalize;
+    color: #1B8A4E;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.model-logo i{
+    width: 100px;
+   
+}
+.model-logo i:hover{
+    transform: scale(3);
+    
+    transition: 1s;
+}
+.model-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top:50px;
+}
+.model-content h2{
+    margin-top: 30px;
+}
+/* foooter */
+footer{
+    background-color: #121525;
+    padding: 30px 150px;
+  color: #FAFBFC;
+}

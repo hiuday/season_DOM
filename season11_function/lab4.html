@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function countCharacter(array, character) {
+        // Nếu ký tự có nằm trong mảng
+        if (array.includes(character)) {
+          // Duyệt qua các phần tử của mảng
+          for (const element of array) {
+            // Nếu phần tử bằng ký tự cần tìm
+            if (element === character) {
+              // Tăng biến đếm
+              count++;
+            }
+          }
+
+          // Trả về số lần xuất hiện của ký tự
+          return count;
+        } else {
+          // Trả về -1
+          return -1;
+        }
+      }
+
+      // Ví dụ
+      const array = ["a", "b", "c", "a", "a"];
+      const character = "a";
+
+      // Gọi hàm countCharacter()
+      const count = countCharacter(array, character);
+
+      // Hiển thị kết quả
+      console.log("Số lần xuất hiện của ký tự 'a' là " + count);
+      //bài 2
+      function reverseArray(arr) {
+        // Khởi tạo biến để lưu trữ mảng đảo ngược
+        const reversedArray = [];
+
+        // Duyệt qua mảng từ cuối đến đầu
+        for (let i = arr.length - 1; i >= 0; i--) {
+          // Thêm phần tử vào mảng đảo ngược
+          reversedArray.push(arr[i]);
+        }
+
+        // Trả về mảng đảo ngược
+        return reversedArray;
+      }
+
+      // Khởi tạo mảng
+      const arr = [1, 2, 3, 4, 5];
+
+      // Gọi hàm reverseArray()
+      const reversedArray = reverseArray(arr);
+
+      // Hiển thị kết quả
+      console.log("Mảng đảo ngược: " + reversedArray);
+      // bài 3
+      function swapNumbers(num1, num2) {
+        // Lưu trữ giá trị của num1
+        let temp = num1;
+
+        // Gán giá trị của num2 cho num1
+        num1 = num2;
+
+        // Gán giá trị của temp cho num2
+        num2 = temp;
+
+        // Trả về 2 số nguyên đã được đổi chỗ
+        return [num1, num2];
+      }
+
+      // Nhập 2 số nguyên từ người dùng
+      const num1 = Number(prompt("Nhập số thứ nhất: "));
+      const num2 = Number(prompt("Nhập số thứ hai: "));
+
+      // Gọi hàm swapNumbers()
+      const [newNum1, newNum2] = swapNumbers(num1, num2);
+
+      // Hiển thị kết quả
+      console.log("Số thứ nhất sau khi đổi chỗ là " + newNum1);
+      console.log("Số thứ hai sau khi đổi chỗ là " + newNum2);
+      //bài 4
+      function isPositiveInteger(number) {
+        // Nếu số là số nguyên
+        if (typeof number === "number" && Math.floor(number) === number) {
+          // Nếu số lớn hơn hoặc bằng 0
+          if (number >= 0) {
+            // Số là nguyên dương
+            return true;
+          }
+        }
+
+        // Số không phải là nguyên dương
+        return false;
+      }
+
+      // Ví dụ
+      const number = 10;
+
+      // Gọi hàm isPositiveInteger()
+      const isPositiveIntegerResult = isPositiveInteger(number);
+
+      // Hiển thị kết quả
+      console.log(
+        "Số " +
+          number +
+          " có phải là nguyên dương không? " +
+          isPositiveIntegerResult
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Rectangle {
+        // Thuộc tính chiều dài
+        width = "";
+
+        // Thuộc tính chiều rộng
+        height = "";
+
+        // Hàm khởi tạo
+        constructor(width = number, height = number) {
+          this.width = width;
+          this.height = height;
+        }
+
+        // Hàm tính diện tích
+        get area() {
+          return this.width * this.height;
+        }
+
+        // Hàm tính chu vi
+        get perimeter() {
+          return 2 * (this.width + this.height);
+        }
+
+        // Hàm hiển thị hình chữ nhật chưa biết
+      }
+      // Khai báo và khởi tạo một đối tượng kiểu Rectangle
+      const rectangle = new Rectangle(100, 50);
+
+      // Hiển thị hình chữ nhật trên màn hình web
+      const draw = document.querySelector("canvas");
+      
+
+      // Thay đổi chiều dài và chiều rộng của hình chữ nhật
+      rectangle.width = 200;
+      rectangle.height = 100;
+
+      // In ra màn hình diện tích và chu vi của hình chữ nhật đó
+      console.log("Diện tích của hình chữ nhật là: " + rectangle.area);
+      console.log("Chu vi của hình chữ nhật là: " + rectangle.perimeter);
+
+      class Temperature {
+        // Thuộc tính nhiệt độ theo độ C
+        temperatureC = "";
+
+        // Hàm khởi tạo
+        constructor(temperatureC = number) {
+          this.temperatureC = temperatureC;
+        }
+
+        // Hàm chuyển đổi từ độ C sang độ F
+        get toFahrenheit() {
+          return (this.temperatureC * 9) / 5 + 32;
+        }
+
+        // Hàm chuyển đổi từ độ C sang độ Kenvin
+        get toKelvin() {
+          return this.temperatureC + 273.15;
+        }
+      }
+
+      // Khởi tạo một đối tượng Temperature
+      const temperature = new Temperature(25);
+
+      // Hiển thị nhiệt độ F và độ Kenvin tương ứng
+      console.log("Nhiệt độ F là: " + temperature.toFahrenheit);
+      console.log("Nhiệt độ K là: " + temperature.toKelvin);
+    </script>
+  </body>
+</html>

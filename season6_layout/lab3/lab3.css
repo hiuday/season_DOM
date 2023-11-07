@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 100px 600px;
+}
+section{
+    border: 1px solid black;
+    padding: 10px 30px;
+    height: 800px;
+    width: 600px;
+    background-color: #F5F5F5;
+    
+}
+section h1{
+    text-align: center;
+    margin-bottom: 30px ;
+}
+.book{
+    margin-left: 50px;
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    
+
+}
+.content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40% 40% 40%;
+    gap: 10px;
+    
+}
+.book img{
+    margin-bottom: 10px;
+}
+.book button{
+    padding: 10px;
+    background-color: black;
+    color: #F5F5F5;
+}

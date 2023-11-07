@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: sans-serif;
+}
+body{
+    background-color: #E4E8F0;
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+input,button{
+    border: none;
+    outline: none;
+}

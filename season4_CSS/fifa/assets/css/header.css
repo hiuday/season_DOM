@@ -1,0 +1,36 @@
+.header{
+    background-color: #045694;
+    padding: 15px 30px;
+
+}
+.header-logo,
+.header-nav{
+    display: inline-block;
+    margin-right: 20px;
+}
+.header-logo img{
+    width: 64px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.header-logo i,
+.header-nav ul li{
+    color: white;
+}
+.header-logo i{
+    padding: 8px 9px;
+    background-color: #296FA4;
+    border-radius: 50%;
+}
+.header-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+    font-weight: 300;
+    opacity: 0.7;/* làm mờ chữ*/
+    cursor: pointer;
+}
+.header-nav ul li:hover{
+    opacity: 1;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ảnh mèo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .main {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .footer {
+      width: 100%;
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer button {
+      width: 50px;
+      height: 100px;
+      margin: -15px 10px 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: #000;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .footer button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .listImg img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    .listImg img.active {
+      border: 2px solid red;
+      opacity: 0.5;
+    }
+
+    /* button ở 2 đầu footer và nổi lên trên footer */
+    .footer button:first-child {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+    }
+    .footer button:last-child {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="main">
+        <img
+          src="https://i.pinimg.com/originals/0a/0b/9a/0a0b9a4b2b2b0b6b0b2b0b0b0b0b0b0b.jpg"
+          alt=""
+        />
+      </div>
+      <div class="footer">
+        <button><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="listImg">
+          <!-- dấu mũi tên -->
+        </div>
+        <button><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const imgList = [
+      "https://inkythuatso.com/uploads/thumbnails/800/2022/05/anh-meo-cute-trai-tim-6-10-11-49-23.jpg",
+      "https://i.9mobi.vn/cf/Images/np/2022/11/17/anh-meo-cute-hinh-meo-ngau-de-thuong-3.jpg",
+      "https://i.9mobi.vn/cf/Images/np/2022/11/17/anh-meo-cute-hinh-meo-ngau-de-thuong-4.jpg",
+      "https://i.9mobi.vn/cf/Images/np/2022/11/17/anh-meo-cute-hinh-meo-ngau-de-thuong-16.jpg",
+      "https://inkythuatso.com/uploads/thumbnails/800/2022/05/anh-meo-cute-trai-tim-6-10-11-49-23.jpg",
+      "https://i.9mobi.vn/cf/Images/np/2022/11/17/anh-meo-cute-hinh-meo-ngau-de-thuong-3.jpg",
+      "https://i.9mobi.vn/cf/Images/np/2022/11/17/anh-meo-cute-hinh-meo-ngau-de-thuong-4.jpg",
+      "https://i.9mobi.vn/cf/Images/np/2022/11/17/anh-meo-cute-hinh-meo-ngau-de-thuong-16.jpg",
+      "https://i.pinimg.com/280x280_RS/20/63/b8/2063b8a0a130b3091c2b199cc3f86b8a.jpg",
+    ];
+    const main = document.querySelector(".main img");
+    const listImg = document.querySelector(".listImg");
+    const btnPrev = document.querySelector(".footer button:first-child");
+    const btnNext = document.querySelector(".footer button:last-child");
+    // show ảnh trong footer
+    imgList.forEach((img, index) => {
+      const imgTag = document.createElement("img");
+      imgTag.src = img;
+      imgTag.alt = `image-${index}`;
+      imgTag.classList.add("image");
+      if (index === 0) {
+        imgTag.classList.add("active");
+      }
+      listImg.appendChild(imgTag);
+    });
+
+    // show ảnh đầu tiên lên trang chủ
+    const imgActive = document.querySelector(".listImg img.active");
+    main.src = imgActive.src;
+
+    // xử lý sự kiện click vào ảnh trong footer
+    const listImgTag = document.querySelectorAll(".listImg img");
+    listImgTag.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        const imgActive = document.querySelector(".listImg img.active");
+        imgActive.classList.remove("active");
+        img.classList.add("active");
+        main.src = img.src;
+      });
+    });
+
+    // // handle click button prev, if img is first then return last img
+    // btnPrev.addEventListener("click", () => {
+    //   const imgActive = document.querySelector(".listImg img.active");
+    //   const imgPrev = imgActive.previousElementSibling;
+    //   if (imgPrev) {
+    //     imgActive.classList.remove("active");
+    //     imgPrev.classList.add("active");
+    //     main.src = imgPrev.src;
+    //   } else {
+    //     const imgActive = document.querySelector(".listImg img.active");
+    //     const imgLast = imgActive.parentElement.lastElementChild;
+    //     imgActive.classList.remove("active");
+    //     imgLast.classList.add("active");
+    //     main.src = imgLast.src;
+    //   }
+    // });
+
+    // // handle click button next, if img is last then return first img
+    // btnNext.addEventListener("click", () => {
+    //   const imgActive = document.querySelector(".listImg img.active");
+    //   const imgNext = imgActive.nextElementSibling;
+    //   if (imgNext) {
+    //     imgActive.classList.remove("active");
+    //     imgNext.classList.add("active");
+    //     main.src = imgNext.src;
+    //   } else {
+    //     const imgActive = document.querySelector(".listImg img.active");
+    //     const imgFirst = imgActive.parentElement.firstElementChild;
+    //     imgActive.classList.remove("active");
+    //     imgFirst.classList.add("active");
+    //     main.src = imgFirst.src;
+    //   }
+    // });
+
+    // // auto đổi ảnh, nếu đang ở ảnh cuối cùng thì quay về ảnh đầu tiên
+    // setInterval(() => {
+    //   const imgActive = document.querySelector(".listImg img.active");
+    //   const imgNext = imgActive.nextElementSibling;
+    //   if (imgNext) {
+    //     imgActive.classList.remove("active");
+    //     imgNext.classList.add("active");
+    //     main.src = imgNext.src;
+    //   } else {
+    //     const imgActive = document.querySelector(".listImg img.active");
+    //     const imgFirst = imgActive.parentElement.firstElementChild;
+
+    //     imgActive.classList.remove("active");
+    //     imgFirst.classList.add("active");
+    //     main.src = imgFirst.src;
+    //   }
+    // }, 3000);
+  </script>
+</html>
