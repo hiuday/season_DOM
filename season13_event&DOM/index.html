@@ -144,57 +144,5 @@
         main.src = img.src;
       });
     });
-
-    // // handle click button prev, if img is first then return last img
-    // btnPrev.addEventListener("click", () => {
-    //   const imgActive = document.querySelector(".listImg img.active");
-    //   const imgPrev = imgActive.previousElementSibling;
-    //   if (imgPrev) {
-    //     imgActive.classList.remove("active");
-    //     imgPrev.classList.add("active");
-    //     main.src = imgPrev.src;
-    //   } else {
-    //     const imgActive = document.querySelector(".listImg img.active");
-    //     const imgLast = imgActive.parentElement.lastElementChild;
-    //     imgActive.classList.remove("active");
-    //     imgLast.classList.add("active");
-    //     main.src = imgLast.src;
-    //   }
-    // });
-
-    // // handle click button next, if img is last then return first img
-    // btnNext.addEventListener("click", () => {
-    //   const imgActive = document.querySelector(".listImg img.active");
-    //   const imgNext = imgActive.nextElementSibling;
-    //   if (imgNext) {
-    //     imgActive.classList.remove("active");
-    //     imgNext.classList.add("active");
-    //     main.src = imgNext.src;
-    //   } else {
-    //     const imgActive = document.querySelector(".listImg img.active");
-    //     const imgFirst = imgActive.parentElement.firstElementChild;
-    //     imgActive.classList.remove("active");
-    //     imgFirst.classList.add("active");
-    //     main.src = imgFirst.src;
-    //   }
-    // });
-
-    // // auto đổi ảnh, nếu đang ở ảnh cuối cùng thì quay về ảnh đầu tiên
-    // setInterval(() => {
-    //   const imgActive = document.querySelector(".listImg img.active");
-    //   const imgNext = imgActive.nextElementSibling;
-    //   if (imgNext) {
-    //     imgActive.classList.remove("active");
-    //     imgNext.classList.add("active");
-    //     main.src = imgNext.src;
-    //   } else {
-    //     const imgActive = document.querySelector(".listImg img.active");
-    //     const imgFirst = imgActive.parentElement.firstElementChild;
-
-    //     imgActive.classList.remove("active");
-    //     imgFirst.classList.add("active");
-    //     main.src = imgFirst.src;
-    //   }
-    // }, 3000);
   </script>
 </html>
